@@ -1,3 +1,12 @@
+/* Variables de color */
+:root {
+  --color-fondo: #030d18;
+  --color-primario: #003843;
+  --color-secundario: #10af94;
+  --color-complementario: #009c9b;
+  --color-destaque: #00b5e5;
+  --color-blanco: #ffffff;
+}
 /*---- Ajustes Globales ---*/
 body {
   padding: 0;
