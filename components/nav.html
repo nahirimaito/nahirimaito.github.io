@@ -1,8 +1,11 @@
 <nav class="navbar">
   <div id="logonm">
-    <img src="/assets/home/logonm.svg" alt="Nahiri Maito" />
+    <a href="/index.html"
+      ><img src="/assets/home/logo-nmv3.svg" alt="Nahiri Maito"
+    /></a>
   </div>
-  <ul>
+
+  <ul class="nav-menu-expand">
     <li>
       <a href="/index.html">
         <img
@@ -36,6 +39,68 @@
       >
     </li>
   </ul>
+  <button
+    class="hamburger"
+    onclick="document.getElementById('drawer').classList.toggle('open')"
+  >
+    Menú ☰
+  </button>
 </nav>
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <div class="drawer-logo">Nahiri Maito</div>
+    <button
+      class="close-btn"
+      onclick="document.getElementById('drawer').classList.remove('open')"
+      aria-label="Cerrar menú"
+    >
+      ✕
+    </button>
+  </div>
+  <ul class="drawer-links">
+    <li>
+      <a
+        href="/servicios.html"
+        onclick="document.getElementById('drawer').classList.remove('open')"
+        >Servicios <span class="arrow">→</span></a
+      >
+    </li>
+    <li>
+      <a
+        href="/catalogo.html"
+        onclick="document.getElementById('drawer').classList.remove('open')"
+        >Catálogo <span class="arrow">→</span></a
+      >
+    </li>
+    <li>
+      <a
+        href="/portafolio.html"
+        onclick="document.getElementById('drawer').classList.remove('open')"
+        >Portafolio <span class="arrow">→</span></a
+      >
+    </li>
+    <li>
+      <a
+        href="/nosotros.html"
+        onclick="document.getElementById('drawer').classList.remove('open')"
+        >Nosotros <span class="arrow">→</span></a
+      >
+    </li>
+    <li>
+      <a
+        href="/ayuda.html"
+        onclick="document.getElementById('drawer').classList.remove('open')"
+        >Ayuda <span class="arrow">→</span></a
+      >
+    </li>
+  </ul>
+  <a
+    class="drawer-cta"
+    href="https://wa.me/message/WMK4UMZY3X46C1"
+    onclick="document.getElementById('drawer').classList.remove('open')"
+    >Contactar por WhatsApp →</a
+  >
+</div>
 
 <section class="barghost"></section>

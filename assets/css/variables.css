@@ -1,0 +1,45 @@
+/* -- Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=telma@1&display=swap");
+
+:root {
+  /* Brand */
+
+  --color-brand: #005f63; /* Abyssal Teal */
+  --color-brand-light: #00bce7; /* Sky Breeze */
+
+  /* Accent Families */
+
+  --color-accent-ocean: #00968f; /* Ocean Pulse */
+  --color-accent-emerald: #10af94; /* Emerald Flow */
+
+  /* Base */
+
+  --color-bg-primary: #030d18; /* Nocturne Black */
+  --color-bg-secondary: #0b1724;
+
+  /* Texto */
+  --font-body: "Lexend", sans-serif;
+  --font-subtitle: "Lexend Deca", sans-serif;
+  --font-heading: "Telma", serif;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.75);
+  /*Espaciado*/
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-xxl: 8rem;
+  /* Bordes */
+  --color-border: rgba(255, 255, 255, 0.12);
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+  --border-standard: 1px solid #00bce7;
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  /* Ancho máximo*/
+  --container-width: 1280px;
+}
