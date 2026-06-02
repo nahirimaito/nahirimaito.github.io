@@ -33,8 +33,7 @@ body {
     font-size: 1.5rem;
   }
   h4,
-  h5,
-  h6 {
+  h5 {
     font-family: var(--font-subtitle);
     font-optical-sizing: auto;
     font-style: normal;
@@ -47,6 +46,11 @@ body {
   h5 {
     font-weight: 400;
     font-size: 1rem;
+  }
+  h6 {
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--color-brand-light);
   }
 
   li {

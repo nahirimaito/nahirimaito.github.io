@@ -33,6 +33,7 @@
   --space-xl: 6rem;
   --space-xxl: 8rem;
   /* Bordes */
+  --borde-prueba: 2px solid red;
   --color-border: rgba(255, 255, 255, 0.12);
   --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
   --border-standard: 1px solid #00bce7;
