@@ -1,17 +1,23 @@
+main {
+  width: 90dvw;
+  margin: 0 auto;
+}
+
 /* === Bienvenida === */
 .hero-principal {
+  width: clamp(300px, 700px, 90dvw);
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
   h2 {
+    font-size: 2.5rem;
     letter-spacing: 0.1em;
     strong {
-      font-size: 4rem;
+      font-size: 5dvw;
     }
   }
   h5 {
     color: rgba(255, 255, 255, 0.7);
-    font-size: smaller;
+    font-size: min(1rem, 2dvw);
     letter-spacing: 0.1em;
   }
   .division-container {
@@ -38,23 +44,23 @@
 }
 /*-- Cards de navegación --*/
 .service-paths {
-  padding: 2% 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  width: clamp(320px, 100%, 90dvw);
+  justify-content: space-evenly;
+  display: inline-flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  margin: 0 auto;
   .path-card {
+    width: clamp(300px, 380px, 300px);
+    padding: clamp(2%, 2dvw, 5%);
     border: var(--border-subtle);
-    padding: 5%;
     background-color: var(--color-bg-secondary);
     .header-path-card {
-      margin-bottom: 5%;
+      /*-- Posicion y Acomdo --*/
+      margin-bottom: 1rem;
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
       justify-content: center;
-      gap: 1rem;
       h6,
       h3 {
         margin: 2%;
@@ -62,96 +68,200 @@
       }
 
       .img-path-card {
-        width: 30dvw;
         max-height: 20dvh;
-        height: 100%;
       }
       .info-path-card {
-        max-height: 30dvw;
+        max-width: 45dvw;
       }
     }
-    .labels-path-card {
+
+    &:hover {
+      border: var(--color-bg-secondary);
+      box-shadow: 0px 0px 1px;
+      background:
+        linear-gradient(
+            var(--border-subtle),
+            transparent,
+            var(--border-subtle),
+            transparent,
+            transparent,
+            var(--border-subtle),
+            transparent,
+            var(--border-subtle)
+          )
+          padding-box,
+        linear-gradient(to top left, #121fcf 0%, #cf1512 100%) border-box;
+    }
+  }
+}
+.labels-path-card {
+  display: flex;
+  flex-wrap: wrap;
+  .label-service {
+    opacity: 0.8;
+    background: none;
+    border: var(--border-standard);
+    color: var(--color-accent-emerald);
+    font-family: var(--font-subtitle);
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    margin: 1%;
+    h6 {
+      padding: 0;
+      margin: 0;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  }
+}
+.quienes-somos {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .info-quienes-somos {
+    padding: 2em;
+    width: clamp(min(90dvw, 300px), 50dvw, 600px);
+    height: min-content;
+    background-color: var(--color-bg-secondary);
+    border: var(--border-subtle);
+    clip-path: polygon(
+      40% 3%,
+      50% 8%,
+      100% 8%,
+      100% 90%,
+      90% 100%,
+      0% 100%,
+      0% 3%
+    );
+    .header-quienes-somos {
+      width: 100%;
+    }
+    hr {
+      border: var(--border-subtle);
+    }
+    .carrousel-quienes-somos {
       display: flex;
-      flex-wrap: wrap;
-      .label-service {
-        opacity: 0.8;
-        background: none;
-        border: var(--border-standard);
-        color: var(--color-accent-emerald);
-        font-family: var(--font-subtitle);
-        text-transform: uppercase;
-        padding: 0.35rem 0.75rem;
-        margin: 1%;
-        h6 {
+      align-items: start;
+      div {
+        width: 150px;
+        display: inline-block;
+        h4 {
+          font-family:
+            "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+            Geneva, Verdana, sans-serif;
+          font-size: 2.5rem;
           padding: 0;
           margin: 0;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
+          color: var(--color-brand-light);
         }
+        h3 {
+          font-size: xx-large;
+          padding: 0;
+          margin: 0;
+          color: var(--color-brand-light);
+        }
+      }
+    }
+  }
+  .img-floating {
+    width: clamp(min(90dvw, 300px), 50dvw, 500px);
+    margin: 5%;
+  }
+}
+
+.container-cards-servicios-recursos {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  .cards-servicios-recursos {
+    padding: clamp(2%, 5vw, 5%);
+    width: clamp(300px, 100%, 450px);
+    background: var(--color-bg-secondary);
+    border: var(--border-standard);
+    h5 {
+      text-transform: uppercase;
+      line-height: 1em;
+      letter-spacing: 0.12em;
+      .icon-list {
+        vertical-align: center;
+        margin: 2%;
+        font-size: 2rem;
+        color: var(--color-brand-light);
       }
     }
   }
 }
 
-#servicioscard {
-  justify-content: center;
-  background-color: #030c18;
-  padding: 12% 10%;
-
-  h2 {
-    font-size: clamp(0.875rem, 2vw, 1.5rem);
+.portfolio-general {
+  display: flex;
+  .header-portfolio {
+    padding: clamp(2%, 5vw, 5%);
   }
-
-  svg {
-    max-height: 50px;
+  .collection-portfolio {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: 0 mandatory;
+    .collection-card {
+      border: var(--border-standard);
+      padding: 2%;
+      min-height: 420px;
+      width: 320px;
+      .img-collection {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
   }
-  #DescServDest {
+}
+.sobre-nosotros {
+  width: min(var(--container-width), 90dvw);
+  margin: 0 auto;
+  .sobre-nosotros__header {
+    h4 {
+      font-weight: 100;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+    }
+  }
+  .sobre-nosotros__team {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
-  }
-  /* Contenedor de cards */
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  /* Cards individuales */
-  .card {
-    background-color: rgba(15, 174, 147, 0.7);
-    /* Color de fondo turquesa claro con transparencia */
-    color: white;
-    /* Color de texto blanco */
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition:
-      transform 0.3s,
-      box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid lime;
+    .team-profile,
+    .sobre-nosotros__timeline {
+      border: 1px solid red;
+      width: min(340px, 90dvw);
+      padding: clamp(2%, 2vw, 5%);
+      .team-profile__header {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        img {
+          margin: 5%;
+          width: min(150px, 30%);
+          height: 100%;
+          clip-path: circle(43%);
+        }
 
-    a {
-      text-decoration: none;
-      color: white;
-    }
-  }
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  /* Estilos responsivos */
-  @media (max-width: 600px) {
-    .contact-banner {
-      font-size: 14px;
-    }
-
-    .card h3 {
-      font-size: 18px;
-    }
-
-    .card p {
-      font-size: 14px;
+        .sobre-nosotros__description {
+          width: 100%;
+        }
+      }
+      .team-profile__title {
+        h5 {
+          margin-top: 0;
+        }
+      }
     }
   }
 }

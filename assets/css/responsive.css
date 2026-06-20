@@ -124,6 +124,14 @@
   .drawer.open {
     transform: translateY(0);
   }
+  .service-paths {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
 
   .hero-bienvenida,
   .document-container {
